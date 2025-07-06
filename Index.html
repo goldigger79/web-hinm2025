@@ -170,8 +170,8 @@
 
     <!-- Floating Social Media Icons -->
     <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-        <a href="https://www.facebook.com/your-page-url" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #1877F2;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
-        <a href="https://t.me/your-channel-url" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #26A5E4;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.857 1.23-.695.04-1.22-.46-1.8-1.08l-2.87-2.1-.002.001-1.408 1.358a.71.71 0 0 1-.55.244l.2-1.43 3.64-3.3c.625-.573.34-1.018-.28-1.59l-4.55 2.975c-.81.535-1.57.18-1.81-.51l-1.05-3.11C4.1 8.26 4.63 7.5 5.46 7.16c3.33-1.39 6.88-2.85 7.44-3.03.24-.07.4-.04.48.03z" /></svg></a>
+        <a href="https://www.facebook.com/HARIINOVASIMELAKA2025" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #1877F2;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
+        <a href="https://t.me/+dgrs22r5X89hMWM1" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #26A5E4;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.857 1.23-.695.04-1.22-.46-1.8-1.08l-2.87-2.1-.002.001-1.408 1.358a.71.71 0 0 1-.55.244l.2-1.43 3.64-3.3c.625-.573.34-1.018-.28-1.59l-4.55 2.975c-.81.535-1.57.18-1.81-.51l-1.05-3.11C4.1 8.26 4.63 7.5 5.46 7.16c3.33-1.39 6.88-2.85 7.44-3.03.24-.07.4-.04.48.03z" /></svg></a>
     </div>
 
     <!-- Participant Registration Page (Initially Hidden) -->
@@ -234,27 +234,42 @@
     <!-- Firebase SDKs -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // --- Firebase Initialization ---
-        // This line is updated to read from Netlify's environment variables
-        const firebaseConfig = JSON.parse(import.meta.env.VITE_FIREBASE_CONFIG);
+        const userProvidedConfig = {
+            apiKey: "AIzaSyD71eMAgNsKhw0A4VQ2VqWC0TytExls5i0",
+            authDomain: "hinm2025-feb70.firebaseapp.com",
+            projectId: "hinm2025-feb70",
+            storageBucket: "hinm2025-feb70.appspot.com",
+            messagingSenderId: "990542306714",
+            appId: "1:990542306714:web:bc13e11cbda279d3b1ee23",
+            measurementId: "G-PZ8S0RLFM7"
+        };
+        
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : userProvidedConfig;
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
         
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-        const db = getFirestore(app);
+        let app, auth, db;
 
-        // Authenticate user
-        (async () => {
-            try {
-                await signInAnonymously(auth);
-            } catch (error) {
-                console.error("Firebase authentication failed:", error);
-                showModal("Ralat", "Gagal untuk mengesahkan sesi anda. Sila muat semula halaman.");
-            }
-        })();
+        try {
+            app = initializeApp(firebaseConfig);
+            auth = getAuth(app);
+            db = getFirestore(app);
+            // Authenticate user
+            (async () => {
+                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                    await signInWithCustomToken(auth, __initial_auth_token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                console.log("Firebase initialized and user signed in.");
+            })();
+        } catch (error) {
+            console.error("Firebase initialization failed:", error);
+        }
+
 
         // --- UI Elements ---
         const mainPage = document.getElementById('main-page');
@@ -296,6 +311,10 @@
         // --- Form Submission Logic ---
         participantForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (!db) {
+                showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data. Sila pastikan konfigurasi Firebase adalah betul.");
+                return;
+            }
             const submitButton = e.target.querySelector('button[type="submit"]');
             submitButton.disabled = true;
             submitButton.textContent = 'Menghantar...';
@@ -331,6 +350,10 @@
 
         judgeForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (!db) {
+                showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data. Sila pastikan konfigurasi Firebase adalah betul.");
+                return;
+            }
             const submitButton = e.target.querySelector('button[type="submit"]');
             submitButton.disabled = true;
             submitButton.textContent = 'Menghantar...';
