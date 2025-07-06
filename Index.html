@@ -164,7 +164,13 @@
 
         <!-- Footer -->
         <footer class="text-slate-300 py-10" style="background-color: #00227a;">
-            <div class="container mx-auto px-6 text-center"><p>&copy; 2025 Hari Inovasi Negeri Melaka. Hak Cipta Terpelihara.</p><p class="text-sm mt-2">Dianjurkan dengan kerjasama Kerajaan Negeri Melaka, UTeM dan UniKL MICET.</p></div>
+            <div class="container mx-auto px-6 text-center">
+                <p>&copy; 2025 Hari Inovasi Negeri Melaka. Hak Cipta Terpelihara.</p>
+                <p class="text-sm mt-2">Dianjurkan dengan kerjasama Kerajaan Negeri Melaka, UTeM dan UniKL MICET.</p>
+                <div class="mt-4">
+                    <a href="#" id="staff-login-btn" class="text-xs text-slate-400 hover:text-white transition">Log Masuk Staf</a>
+                </div>
+            </div>
         </footer>
     </div>
 
@@ -222,7 +228,30 @@
         </div>
     </div>
     
-    <!-- Modal for feedback -->
+    <!-- Admin Page (Initially Hidden) -->
+    <div id="admin-page" class="hidden">
+        <div class="min-h-screen bg-slate-200 flex flex-col items-center justify-center py-12 px-4">
+            <h2 class="text-4xl font-extrabold mb-8" style="color: var(--melaka-blue);">Halaman Admin</h2>
+            <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-lg">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800">Muat Turun Data Pendaftaran</h3>
+                    <p class="text-slate-600">Klik butang di bawah untuk memuat turun senarai pendaftaran terkini dalam format CSV, yang boleh dibuka dengan Microsoft Excel.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button id="download-participants-btn" class="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none" style="background-color: var(--melaka-blue);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
+                            Muat Turun Data Peserta
+                        </button>
+                        <button id="download-judges-btn" class="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none" style="background-color: var(--melaka-red);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
+                            Muat Turun Data Juri
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for feedback & password -->
     <div id="feedback-modal" class="modal-backdrop hidden">
         <div class="modal-content">
             <h3 id="modal-title"></h3>
@@ -231,11 +260,23 @@
         </div>
     </div>
 
+    <div id="password-modal" class="modal-backdrop hidden">
+        <div class="modal-content">
+            <h3 style="color: var(--melaka-blue);">Akses Admin</h3>
+            <p>Sila masukkan kata laluan untuk mengakses halaman ini.</p>
+            <form id="password-form">
+                <input type="password" id="password-input" class="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm mb-4" placeholder="Kata Laluan">
+                <button type="submit" class="w-full py-2 px-4 rounded-md text-white" style="background-color: var(--melaka-blue);">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+
     <!-- Firebase SDKs -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { getFirestore, collection, addDoc, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // --- Firebase Initialization ---
         const userProvidedConfig = {
@@ -275,10 +316,12 @@
         const mainPage = document.getElementById('main-page');
         const registrationPage = document.getElementById('registration-page');
         const judgeRegistrationPage = document.getElementById('judge-registration-page');
+        const adminPage = document.getElementById('admin-page');
         
         const registerButtons = document.querySelectorAll('.register-btn');
         const judgeRegisterButtons = document.querySelectorAll('.judge-register-btn');
         const backToHomeButtons = document.querySelectorAll('.back-to-home-btn');
+        const staffLoginBtn = document.getElementById('staff-login-btn');
 
         const participantForm = document.getElementById('participant-form');
         const judgeForm = document.getElementById('judge-form');
@@ -287,6 +330,115 @@
         const modalTitle = document.getElementById('modal-title');
         const modalMessage = document.getElementById('modal-message');
         const modalCloseBtn = document.getElementById('modal-close');
+
+        const passwordModal = document.getElementById('password-modal');
+        const passwordForm = document.getElementById('password-form');
+        const passwordInput = document.getElementById('password-input');
+
+        const downloadParticipantsBtn = document.getElementById('download-participants-btn');
+        const downloadJudgesBtn = document.getElementById('download-judges-btn');
+
+        // --- Admin Page Logic ---
+        const ADMIN_PASSWORD = "admin2025"; // Tukar kata laluan di sini
+
+        staffLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            passwordModal.classList.remove('hidden');
+        });
+
+        passwordForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (passwordInput.value === ADMIN_PASSWORD) {
+                passwordModal.classList.add('hidden');
+                mainPage.classList.add('hidden');
+                adminPage.classList.remove('hidden');
+            } else {
+                showModal("Ralat", "Kata laluan salah. Sila cuba lagi.");
+                passwordInput.value = '';
+            }
+        });
+
+        async function fetchData(collectionName) {
+            if (!db) {
+                showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data.");
+                return [];
+            }
+            const querySnapshot = await getDocs(collection(db, `artifacts/${appId}/public/data/${collectionName}`));
+            const data = [];
+            querySnapshot.forEach((doc) => {
+                data.push(doc.data());
+            });
+            return data;
+        }
+
+        function convertToCSV(data) {
+            if (data.length === 0) return '';
+            const headers = Object.keys(data[0]);
+            const csvRows = [headers.join(',')];
+
+            for (const row of data) {
+                const values = headers.map(header => {
+                    const escaped = ('' + row[header]).replace(/"/g, '""');
+                    return `"${escaped}"`;
+                });
+                csvRows.push(values.join(','));
+            }
+            return csvRows.join('\n');
+        }
+
+        function downloadCSV(csv, filename) {
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute('href', url);
+                link.setAttribute('download', filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        downloadParticipantsBtn.addEventListener('click', async () => {
+            downloadParticipantsBtn.textContent = 'Memuat turun...';
+            downloadParticipantsBtn.disabled = true;
+            try {
+                const participants = await fetchData('participant_registrations');
+                if (participants.length > 0) {
+                    const csv = convertToCSV(participants);
+                    downloadCSV(csv, 'pendaftaran_peserta.csv');
+                } else {
+                    showModal("Tiada Data", "Tiada data pendaftaran peserta untuk dimuat turun.");
+                }
+            } catch (error) {
+                showModal("Ralat", "Gagal memuat turun data.");
+                console.error("Error downloading data:", error);
+            } finally {
+                downloadParticipantsBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg> Muat Turun Data Peserta';
+                downloadParticipantsBtn.disabled = false;
+            }
+        });
+
+        downloadJudgesBtn.addEventListener('click', async () => {
+            downloadJudgesBtn.textContent = 'Memuat turun...';
+            downloadJudgesBtn.disabled = true;
+             try {
+                const judges = await fetchData('judge_registrations');
+                 if (judges.length > 0) {
+                    const csv = convertToCSV(judges);
+                    downloadCSV(csv, 'pendaftaran_juri.csv');
+                } else {
+                    showModal("Tiada Data", "Tiada data pendaftaran juri untuk dimuat turun.");
+                }
+            } catch (error) {
+                showModal("Ralat", "Gagal memuat turun data.");
+                console.error("Error downloading data:", error);
+            } finally {
+                downloadJudgesBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg> Muat Turun Data Juri';
+                downloadJudgesBtn.disabled = false;
+            }
+        });
 
         // --- Modal Logic ---
         function showModal(title, message) {
@@ -300,9 +452,9 @@
         modalCloseBtn.addEventListener('click', hideModal);
 
         // --- Page Switching Logic ---
-        const showRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); registrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
-        const showJudgeRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); registrationPage.classList.add('hidden'); judgeRegistrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
-        const showMainPage = () => { registrationPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); mainPage.classList.remove('hidden'); window.scrollTo(0, 0); };
+        const showRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); registrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
+        const showJudgeRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); registrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); judgeRegistrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
+        const showMainPage = () => { registrationPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); mainPage.classList.remove('hidden'); window.scrollTo(0, 0); };
 
         registerButtons.forEach(button => button.addEventListener('click', showRegistrationPage));
         judgeRegisterButtons.forEach(button => button.addEventListener('click', showJudgeRegistrationPage));
