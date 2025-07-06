@@ -150,7 +150,16 @@
 
         <!-- Organizers Section -->
         <section id="penganjur" class="py-16">
-            <div class="container mx-auto px-6"><h2 class="text-center text-2xl font-bold text-slate-700 mb-10">Dengan Kerjasama</h2><div class="flex justify-center items-center gap-8 md:gap-16 flex-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Coat_of_arms_of_Malacca.svg/1200px-Coat_of_arms_of_Malacca.svg.png" alt="Logo Jata Negeri Melaka" class="h-24 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110"><img src="https://www.utem.edu.my/images/2020/07/29/logo-utem-2020.png" alt="Logo UTeM" class="h-20 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110"><img src="https://www.unikl.edu.my/wp-content/uploads/2020/02/micet-logo.png" alt="Logo UniKL MICET" class="h-20 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110"></div></div>
+            <div class="container mx-auto px-6"><h2 class="text-center text-2xl font-bold text-slate-700 mb-10">Dengan Kerjasama</h2>
+                <div class="flex justify-center items-center gap-8 md:gap-16 flex-wrap">
+                    <!-- Logo Jata Melaka -->
+                    <img src="https://icon2.cleanpng.com/lnd/20250116/ju/3d718f9f40b730fc1264a2a084c3fe.webp" alt="Logo Jata Negeri Melaka" class="h-24 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110">
+                    <!-- Logo UTeM -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/UTeM.jpg" alt="Logo UTeM" class="h-20 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110">
+                    <!-- Logo UniKL MICET -->
+                    <img src="https://info.unikl.edu.my/wp-content/uploads/2024/07/unikl-logo-png-new-1.png" alt="Logo UniKL MICET" class="h-20 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110">
+                </div>
+            </div>
         </section>
 
         <!-- Footer -->
@@ -225,11 +234,12 @@
     <!-- Firebase SDKs -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         // --- Firebase Initialization ---
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : { apiKey: "YOUR_API_KEY", authDomain: "YOUR_AUTH_DOMAIN", projectId: "YOUR_PROJECT_ID" };
+        // This line is updated to read from Netlify's environment variables
+        const firebaseConfig = JSON.parse(import.meta.env.VITE_FIREBASE_CONFIG);
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
         
         const app = initializeApp(firebaseConfig);
@@ -239,11 +249,7 @@
         // Authenticate user
         (async () => {
             try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
+                await signInAnonymously(auth);
             } catch (error) {
                 console.error("Firebase authentication failed:", error);
                 showModal("Ralat", "Gagal untuk mengesahkan sesi anda. Sila muat semula halaman.");
