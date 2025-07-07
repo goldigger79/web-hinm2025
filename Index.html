@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hari Inovasi Negeri Melaka 2025</title>
     
-    <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -69,19 +63,19 @@
             max-width: 90%;
             width: 400px;
         }
-        .modal-content h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
-        .modal-content p { margin-bottom: 1.5rem; }
-        .modal-close-btn { padding: 0.5rem 1rem; border-radius: 0.375rem; cursor: pointer; transition: background-color 0.3s; }
-        
-        /* Scroll Animation */
-        .fade-in-element {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        .modal-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
         }
-        .fade-in-element.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+        .modal-content p {
+            margin-bottom: 1.5rem;
+        }
+        .modal-close-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
         }
     </style>
 </head>
@@ -96,8 +90,8 @@
                     <nav class="hidden md:flex items-center space-x-6">
                         <a href="#info" class="text-slate-600 hover:text-blue-700 transition">Info Acara</a>
                         <a href="#objektif" class="text-slate-600 hover:text-blue-700 transition">Objektif</a>
+                        <a href="#konsep" class="text-slate-600 hover:text-blue-700 transition">Konsep</a>
                         <a href="#kategori" class="text-slate-600 hover:text-blue-700 transition">Kategori</a>
-                        <a href="#sorotan" class="text-slate-600 hover:text-blue-700 transition">Sorotan</a>
                     </nav>
                     <div class="flex items-center gap-2">
                         <a href="#" class="judge-register-btn text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition shadow-sm border" style="border-color: var(--melaka-blue); color: var(--melaka-blue);">Daftar Juri</a>
@@ -119,34 +113,31 @@
             </div>
         </section>
 
-        <!-- Countdown Timer Section -->
-        <section id="countdown" class="py-12 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-2xl font-bold mb-4" style="color: var(--melaka-blue);">Kira Detik ke Hari Inovasi!</h2>
-                <div id="countdown-timer" class="flex justify-center gap-4 md:gap-8 text-slate-800">
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="days" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Hari</div></div>
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="hours" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Jam</div></div>
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="minutes" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Minit</div></div>
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="seconds" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Saat</div></div>
-                </div>
-            </div>
-        </section>
-
         <!-- Event Info Section -->
         <section id="info" class="py-20">
-            <div class="container mx-auto px-6"><div class="bg-white rounded-xl shadow-lg p-8 md:p-12 fade-in-element"><div class="grid md:grid-cols-3 gap-8 text-center"><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-red); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tarikh</h3><p class="text-slate-600">24 September 2025 (Rabu)</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-blue); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tempat</h3><p class="text-slate-600">Dewan Lestari, UniKL MICET, Melaka</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-yellow); color: #333;"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Masa</h3><p class="text-slate-600">8.30 pagi – 5.00 petang</p></div></div></div></div>
+            <div class="container mx-auto px-6"><div class="bg-white rounded-xl shadow-lg p-8 md:p-12"><div class="grid md:grid-cols-3 gap-8 text-center"><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-red); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tarikh</h3><p class="text-slate-600">24 September 2025 (Rabu)</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-blue); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tempat</h3><p class="text-slate-600">Dewan Lestari, UniKL MICET, Melaka</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-yellow); color: #333;"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Masa</h3><p class="text-slate-600">8.30 pagi – 5.00 petang</p></div></div></div></div>
         </section>
 
         <!-- Theme Section -->
         <section id="tema" class="pb-20">
-            <div class="container mx-auto px-6"><div class="text-center max-w-4xl mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md fade-in-element"><h2 class="text-3xl font-extrabold mb-4" style="color: var(--melaka-blue);">Tema: "Menjana Solusi Inovatif ke Arah Komuniti Sejahtera”</h2><p class="text-slate-600 leading-relaxed">Selaras dengan objektif strategik halatuju Negeri Melaka, pemerkasaan teknologi adalah elemen penting dalam memastikan kelestarian inovasi yang memanfaatkan industri dan komuniti. Inovasi memerlukan penyelesaian terkini yang menggabungkan kaedah konvensional dan moden. Kombinasi ini hanya dapat dicapai dengan kerjasama semua pihak dengan idea dan pengalaman yang berbeza untuk menyelesaikan permasalahan komuniti yang sebenar, agar hasil inovasi yang dicipta dapat dinikmati oleh semua.</p></div></div>
+            <div class="container mx-auto px-6"><div class="text-center max-w-4xl mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md"><h2 class="text-3xl font-extrabold mb-4" style="color: var(--melaka-blue);">Tema: "Menjana Solusi Inovatif ke Arah Komuniti Sejahtera”</h2><p class="text-slate-600 leading-relaxed">Selaras dengan objektif strategik halatuju Negeri Melaka, pemerkasaan teknologi adalah elemen penting dalam memastikan kelestarian inovasi yang memanfaatkan industri dan komuniti. Inovasi memerlukan penyelesaian terkini yang menggabungkan kaedah konvensional dan moden. Kombinasi ini hanya dapat dicapai dengan kerjasama semua pihak dengan idea dan pengalaman yang berbeza untuk menyelesaikan permasalahan komuniti yang sebenar, agar hasil inovasi yang dicipta dapat dinikmati oleh semua.</p></div></div>
         </section>
 
         <!-- Objectives Section -->
         <section id="objektif" class="py-20">
-            <div class="container mx-auto px-6"><div class="section-title"><h2>Objektif Program</h2><p>Matlamat kami adalah untuk memupuk budaya inovasi yang mampan dan berdaya saing di Negeri Melaka.</p></div><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element"><div class="bg-blue-100 text-blue-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.955 11a2 2 0 012-2h2a2 2 0 012 2m-4 6h4m-6 4h6m2-12H9.045M15.955 11a2 2 0 002-2h2a2 2 0 002 2m-4 6h4m-6 4h6m6-12h-1.955" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Platform Global</h3><p>Menyediakan platform untuk membawa hasil penyelidikan ke pertandingan inovasi kebangsaan dan antarabangsa.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 100ms;"><div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Budaya Inovasi</h3><p>Memupuk masyarakat Melaka yang sentiasa berinovasi untuk menjana pendapatan daripada hasil penyelidikan.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 200ms;"><div class="bg-yellow-100 text-yellow-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Jalinan Kerjasama</h3><p>Memperkukuhkan kerjasama erat antara agensi kerajaan, industri, IPT, sekolah dan orang awam.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 300ms;"><div class="bg-slate-100 text-slate-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Pameran Kepakaran</h3><p>Menghimpunkan kepakaran teknologi dan memperlihatkan kepelbagaian hasil cipta serta reka bentuk terkini.</p></div></div></div>
+            <div class="container mx-auto px-6"><div class="section-title"><h2>Objektif Program</h2><p>Matlamat kami adalah untuk memupuk budaya inovasi yang mampan dan berdaya saing di Negeri Melaka.</p></div><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"><div class="bg-blue-100 text-blue-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.955 11a2 2 0 012-2h2a2 2 0 012 2m-4 6h4m-6 4h6m2-12H9.045M15.955 11a2 2 0 002-2h2a2 2 0 002 2m-4 6h4m-6 4h6m6-12h-1.955" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Platform Global</h3><p>Menyediakan platform untuk membawa hasil penyelidikan ke pertandingan inovasi kebangsaan dan antarabangsa.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"><div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Budaya Inovasi</h3><p>Memupuk masyarakat Melaka yang sentiasa berinovasi untuk menjana pendapatan daripada hasil penyelidikan.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"><div class="bg-yellow-100 text-yellow-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Jalinan Kerjasama</h3><p>Memperkukuhkan kerjasama erat antara agensi kerajaan, industri, IPT, sekolah dan orang awam.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"><div class="bg-slate-100 text-slate-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Pameran Kepakaran</h3><p>Menghimpunkan kepakaran teknologi dan memperlihatkan kepelbagaian hasil cipta serta reka bentuk terkini.</p></div></div></div>
         </section>
         
+        <!-- Program Concept Section -->
+        <section id="konsep" class="py-20">
+            <div class="container mx-auto px-6"><div class="section-title"><h2>Konsep Program</h2><p>Program kami direka untuk menjadi interaktif, memberi inspirasi, dan memberi impak kepada semua peserta.</p></div><div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8"><div class="bg-white/80 backdrop-blur-sm p-8 rounded-lg border border-slate-200 shadow-md"><h3 class="text-2xl font-bold mb-4" style="color: var(--melaka-blue);">Pameran, Pertandingan & Penjurian</h3><p>Sesi penilaian produk inovasi dan poster oleh panel juri. Produk inovasi yang dipertandingkan turut akan dipamerkan kepada jemputan luar, membuka peluang kolaborasi dan pengkomersilan.</p></div><div class="bg-white/80 backdrop-blur-sm p-8 rounded-lg border border-slate-200 shadow-md"><h3 class="text-2xl font-bold mb-4" style="color: var(--melaka-blue);">Bengkel Teknikal</h3><p>Bengkel teknikal menggunakan konsep teknologi kimia, biologi dan sains persekitaran. Program ini bertujuan untuk membudayakan bengkel teknikal di kalangan komuniti belia setempat.</p></div></div></div>
+        </section>
+
+        <!-- Judge CTA Section -->
+        <section id="juri" class="py-20">
+            <div class="container mx-auto px-6"><div class="text-center bg-white/80 backdrop-blur-sm p-10 rounded-xl shadow-lg max-w-4xl mx-auto"><h2 class="text-3xl font-extrabold mb-4" style="color: var(--melaka-blue);">Jemputan sebagai Juri Profesional</h2><p class="text-slate-600 leading-relaxed mb-6">Kami menjemput para profesional, ahli akademik, dan pakar industri untuk menyumbang kepakaran anda sebagai juri. Peranan anda amat penting dalam menilai dan mengiktiraf inovasi yang bakal membentuk masa depan.</p><a href="#" class="judge-register-btn text-white font-bold px-8 py-3 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 shadow-lg" style="background-color: var(--melaka-blue);">Daftar Sebagai Juri</a></div></div>
+        </section>
+
         <!-- Categories Section -->
         <section id="kategori" class="py-20">
             <div class="container mx-auto px-6">
@@ -156,117 +147,67 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <!-- Category 1 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Environment, Energy, Food, Agriculture & Disaster Management</h4>
                     </div>
                     <!-- Category 2 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h6.375a.75.75 0 01.75.75v3.375a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75V7.5a.75.75 0 01.75-.75zM9 15h6.375a.75.75 0 01.75.75v3.375a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75V15.75a.75.75 0 01.75-.75z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Manufacturing, Automation, Chemical, Advanced Material & Plastic</h4>
                     </div>
                     <!-- Category 3 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                            <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.75 11.25l-2.472 2.472a3.375 3.375 0 004.773 4.773z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Machinery, Equipment and Tools</h4>
                     </div>
                     <!-- Category 4 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.125-.504 1.125-1.125V14.25m-17.25 4.5v-1.875a3.375 3.375 0 013.375-3.375h9.75a3.375 3.375 0 013.375 3.375v1.875m-17.25 4.5h16.5M3.375 9h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125h17.25c.621 0 1.125.504 1.125 1.125v.001M3.375 9a1.125 1.125 0 00-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-1.5a1.125 1.125 0 00-1.125-1.125H3.375z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Automotive and Transportation</h4>
                     </div>
                     <!-- Category 5 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                            <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.243l-.384.383a1.5 1.5 0 01-2.121 0l-.384-.383a1.5 1.5 0 01.34-2.318l.622-.437a6.75 6.75 0 018.456 0l.622.437a1.5 1.5 0 01.34 2.318z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Electrical, Electronics, Telecommunications and Networking</h4>
                     </div>
                     <!-- Category 6 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                            <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Industrial Design, IR 4.0, Data Analysis, ICT, Digital Technology, IoT and Robotics</h4>
                     </div>
                     <!-- Category 7 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Medical Devices, Healthcare, Special Care and Pharmaceuticals</h4>
                     </div>
                     <!-- Category 8 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.289 2.72a3 3 0 01-4.682-2.72 9.094 9.094 0 013.741-.479m7.289 2.72a8.97 8.97 0 01-4.682 0m4.682 0a8.97 8.97 0 00-4.682 0m-7.289 2.72a9.094 9.094 0 00-3.741-.479 3 3 0 004.682 2.72m7.289-2.72a3 3 0 014.682 2.72 9.094 9.094 0 01-3.741.479M12 18.75a9.094 9.094 0 01-3.741-.479m3.741.479a9.094 9.094 0 003.741-.479M12 18.75a3 3 0 01-3-3V11.25a3 3 0 013-3h.008c1.657 0 3 1.343 3 3v4.5a3 3 0 01-3 3h-.008z" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Social Science, Business & Teaching Innovation, Education, Community Development & Social Innovation</h4>
                     </div>
                     <!-- Category 9 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
                         </div>
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Alat bantu mengajar (guru Sahaja)</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Video & Map Section -->
-        <section id="sorotan" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="section-title">
-                    <h2>Sorotan & Lokasi Acara</h2>
-                    <p>Saksikan sorotan acara dan temui kami di lokasi.</p>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Video Player -->
-                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl fade-in-element">
-                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/k2xt18SPrgM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
-                    <!-- Google Map -->
-                    <div class="h-96 rounded-lg overflow-hidden shadow-2xl fade-in-element">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.372288118944!2d102.3168393152668!3d2.33333319830869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e4e015a5170b%3A0x8a7733b2a265634!2sUniversiti%20Kuala%20Lumpur%20Malaysian%20Institute%20of%20Chemical%20and%20Bioengineering%20Technology%20(UniKL%20MICET)!5e0!3m2!1sen!2smy!4v1657880199441!5m2!1sen!2smy" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20">
-            <div class="container mx-auto px-6">
-                <div class="section-title">
-                    <h2>Apa Kata Mereka</h2>
-                    <p>Dengarkan pengalaman dari para inovator dan rakan kongsi kami.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <div class="bg-white p-8 rounded-lg shadow-lg fade-in-element">
-                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4">
-                        <p class="text-slate-600 italic">"Satu platform yang hebat untuk mengetengahkan bakat-bakat inovasi dari seluruh Melaka. Sangat menggalakkan!"</p>
-                        <h4 class="font-bold mt-4 text-slate-800">Prof. Dr. Ahmad</h4>
-                        <p class="text-sm text-slate-500">Pemenang Anugerah Inovasi 2024</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-lg shadow-lg fade-in-element" style="transition-delay: 150ms;">
-                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4">
-                        <p class="text-slate-600 italic">"Peluang untuk berkolaborasi dengan pihak industri dan akademik di bawah satu bumbung amat bernilai."</p>
-                        <h4 class="font-bold mt-4 text-slate-800">Puan Siti Mariam</h4>
-                        <p class="text-sm text-slate-500">Pengarah Syarikat Teknologi</p>
-                    </div>
-                     <div class="bg-white p-8 rounded-lg shadow-lg fade-in-element" style="transition-delay: 300ms;">
-                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4">
-                        <p class="text-slate-600 italic">"Sebagai pelajar, pengalaman menyertai pertandingan ini membuka minda dan memberi inspirasi untuk terus mencipta."</p>
-                        <h4 class="font-bold mt-4 text-slate-800">Adib Zikri</h4>
-                        <p class="text-sm text-slate-500">Peserta Kategori Sekolah Menengah</p>
                     </div>
                 </div>
             </div>
@@ -309,12 +250,120 @@
         <a href="https://t.me/+OqV-bXgoXqViYmRl" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #26A5E4;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.857 1.23-.695.04-1.22-.46-1.8-1.08l-2.87-2.1-.002.001-1.408 1.358a.71.71 0 0 1-.55.244l.2-1.43 3.64-3.3c.625-.573.34-1.018-.28-1.59l-4.55 2.975c-.81.535-1.57.18-1.81-.51l-1.05-3.11C4.1 8.26 4.63 7.5 5.46 7.16c3.33-1.39 6.88-2.85 7.44-3.03.24-.07.4-.04.48.03z" /></svg></a>
     </div>
 
-    <!-- Registration & Admin Pages (HTML structure remains the same) -->
-    <div id="registration-page" class="hidden">...</div>
-    <div id="judge-registration-page" class="hidden">...</div>
-    <div id="admin-page" class="hidden">...</div>
-    <div id="feedback-modal" class="modal-backdrop hidden">...</div>
-    <div id="password-modal" class="modal-backdrop hidden">...</div>
+    <!-- Participant Registration Page (Initially Hidden) -->
+    <div id="registration-page" class="hidden">
+        <div class="min-h-screen bg-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md"><h2 class="mt-6 text-center text-4xl font-extrabold" style="color: var(--melaka-blue);">Borang Pendaftaran Peserta</h2><p class="mt-2 text-center text-sm text-slate-600">Sila lengkapkan maklumat di bawah.</p></div>
+            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-2xl">
+                <div class="bg-white py-8 px-4 shadow-xl rounded-lg sm:px-10">
+                    <form id="participant-form" class="space-y-6">
+                        <div><label for="institution" class="block text-sm font-medium text-slate-700"> Kategori Penyertaan </label><div class="mt-1"><select id="institution" name="institution" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"><option>UTeM, UiTM, MMU, UCAM, UNIMEL, UniKL</option><option>Politeknik/ Kolej Komuniti /ILP/Industri/KV/Agensi Kerajaan</option><option>Guru Sekolah</option><option>Sekolah Menengah</option><option>Sekolah Rendah</option></select></div></div>
+                        <div><label for="team_name" class="block text-sm font-medium text-slate-700"> Nama Pasukan / Individu </label><div class="mt-1"><input id="team_name" name="team_name" type="text" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="school" class="block text-sm font-medium text-slate-700"> Nama Institusi / Sekolah </label><div class="mt-1"><input id="school" name="school" type="text" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="project_title" class="block text-sm font-medium text-slate-700"> Tajuk Inovasi / Projek </label><div class="mt-1"><input id="project_title" name="project_title" type="text" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="tech_category" class="block text-sm font-medium text-slate-700"> Kategori Teknologi / Penyelidikan </label><div class="mt-1"><select id="tech_category" name="tech_category" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"><option>Environment & Renewable Energy, Green Technology, Food Technology, Agriculture and Disaster Management</option><option>Manufacturing Technologies; Automation; Chemical; Advanced Material & Plastic</option><option>Machinery, Equipment and Tools</option><option>Automotive and Transportation</option><option>Electrical, Electronics, Telecommunications and Networking</option><option>Industrial Design, IR 4.0, Data Analysis, ICT, Digital Technology, IoT and Robotics</option><option>Medical Devices, Healthcare, Special Care and Pharmaceuticals</option><option>Social Science, Business & Teaching Innovation, Education, Community Development & Social Innovation</option><option>Alat bantu mengajar (guru Sahaja)</option></select></div></div>
+                        <hr/><h3 class="text-lg font-medium text-slate-900">Maklumat Ketua Pasukan</h3>
+                        <div><label for="contact_name" class="block text-sm font-medium text-slate-700"> Nama untuk Dihubungi </label><div class="mt-1"><input id="contact_name" name="contact_name" type="text" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="email" class="block text-sm font-medium text-slate-700"> Alamat E-mel </label><div class="mt-1"><input id="email" name="email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="phone" class="block text-sm font-medium text-slate-700"> Nombor Telefon </label><div class="mt-1"><input id="phone" name="phone" type="tel" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div class="flex items-center justify-between gap-4">
+                            <button type="button" class="back-to-home-btn w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" style="background-color: var(--melaka-red);">Kembali ke Laman Utama</button>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500" style="background-color: var(--melaka-yellow);">Hantar Pendaftaran</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Judge Registration Page (Initially Hidden) -->
+    <div id="judge-registration-page" class="hidden">
+        <div class="min-h-screen bg-slate-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-md"><h2 class="mt-6 text-center text-4xl font-extrabold" style="color: var(--melaka-blue);">Borang Pendaftaran Juri</h2><p class="mt-2 text-center text-sm text-slate-600">Sila lengkapkan maklumat anda.</p></div>
+            <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-2xl">
+                <div class="bg-white py-8 px-4 shadow-xl rounded-lg sm:px-10">
+                    <form id="judge-form" class="space-y-6">
+                        <div><label for="judge_name" class="block text-sm font-medium text-slate-700"> Nama Penuh </label><div class="mt-1"><input id="judge_name" name="judge_name" type="text" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="judge_institution" class="block text-sm font-medium text-slate-700"> Jawatan & Institusi </label><div class="mt-1"><input id="judge_institution" name="judge_institution" type="text" required placeholder="Cth: Profesor, Universiti Malaya" class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="judge_email" class="block text-sm font-medium text-slate-700"> Alamat E-mel </label><div class="mt-1"><input id="judge_email" name="judge_email" type="email" autocomplete="email" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="judge_phone" class="block text-sm font-medium text-slate-700"> Nombor Telefon </label><div class="mt-1"><input id="judge_phone" name="judge_phone" type="tel" required class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></div></div>
+                        <div><label for="judge_expertise" class="block text-sm font-medium text-slate-700"> Bidang Kepakaran </label><div class="mt-1"><textarea id="judge_expertise" name="judge_expertise" rows="3" required placeholder="Cth: Kejuruteraan Perisian, Bioteknologi, Sains Sosial..." class="appearance-none block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm placeholder-slate-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea></div></div>
+                        <div class="flex items-center justify-between gap-4">
+                            <button type="button" class="back-to-home-btn w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500" style="background-color: var(--melaka-red);">Kembali ke Laman Utama</button>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500" style="background-color: var(--melaka-yellow);">Hantar Permohonan Juri</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Admin Page (Initially Hidden) -->
+    <div id="admin-page" class="hidden">
+        <div class="min-h-screen bg-slate-200 flex flex-col items-center py-12 px-4">
+            <div class="w-full max-w-7xl mx-auto">
+                 <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-4xl font-extrabold" style="color: var(--melaka-blue);">Halaman Admin</h2>
+                    <button id="admin-back-to-home-btn" class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none" style="background-color: var(--melaka-blue);">
+                        Balik ke Halaman Utama
+                    </button>
+                </div>
+                <div class="space-y-10">
+                    <!-- Participants Data -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Data Pendaftaran Peserta</h3>
+                        <div class="flex justify-end mb-4">
+                            <button id="download-participants-btn" class="flex items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none" style="background-color: var(--melaka-blue);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
+                                Muat Turun CSV
+                            </button>
+                        </div>
+                        <div id="participants-table-container" class="overflow-x-auto">
+                            <p id="participants-loading" class="text-center text-slate-500">Memuatkan data peserta...</p>
+                            <!-- Participant table will be injected here -->
+                        </div>
+                    </div>
+
+                    <!-- Judges Data -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Data Pendaftaran Juri</h3>
+                         <div class="flex justify-end mb-4">
+                            <button id="download-judges-btn" class="flex items-center gap-2 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-90 focus:outline-none" style="background-color: var(--melaka-red);">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg>
+                                Muat Turun CSV
+                            </button>
+                        </div>
+                        <div id="judges-table-container" class="overflow-x-auto">
+                            <p id="judges-loading" class="text-center text-slate-500">Memuatkan data juri...</p>
+                            <!-- Judge table will be injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for feedback & password -->
+    <div id="feedback-modal" class="modal-backdrop hidden">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-message"></p>
+            <button id="modal-close" class="modal-close-btn text-white" style="background-color: var(--melaka-blue);">Tutup</button>
+        </div>
+    </div>
+
+    <div id="password-modal" class="modal-backdrop hidden">
+        <div class="modal-content">
+            <h3 style="color: var(--melaka-blue);">Akses Admin</h3>
+            <p>Sila masukkan kata laluan untuk mengakses halaman ini.</p>
+            <form id="password-form">
+                <input type="password" id="password-input" class="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm mb-4" placeholder="Kata Laluan">
+                <button type="submit" class="w-full py-2 px-4 rounded-md text-white" style="background-color: var(--melaka-blue);">Masuk</button>
+            </form>
+        </div>
+    </div>
+
 
     <!-- Firebase SDKs -->
     <script type="module">
@@ -355,325 +404,286 @@
             console.error("Firebase initialization failed:", error);
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            // --- UI Elements ---
-            const mainPage = document.getElementById('main-page');
-            const registrationPage = document.getElementById('registration-page');
-            const judgeRegistrationPage = document.getElementById('judge-registration-page');
-            const adminPage = document.getElementById('admin-page');
-            
-            const registerButtons = document.querySelectorAll('.register-btn');
-            const judgeRegisterButtons = document.querySelectorAll('.judge-register-btn');
-            const backToHomeButtons = document.querySelectorAll('.back-to-home-btn');
-            const staffLoginBtn = document.getElementById('staff-login-btn');
-            const adminBackToHomeBtn = document.getElementById('admin-back-to-home-btn');
 
-            const participantForm = document.getElementById('participant-form');
-            const judgeForm = document.getElementById('judge-form');
-            
-            const modal = document.getElementById('feedback-modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalMessage = document.getElementById('modal-message');
-            const modalCloseBtn = document.getElementById('modal-close');
+        // --- UI Elements ---
+        const mainPage = document.getElementById('main-page');
+        const registrationPage = document.getElementById('registration-page');
+        const judgeRegistrationPage = document.getElementById('judge-registration-page');
+        const adminPage = document.getElementById('admin-page');
+        
+        const registerButtons = document.querySelectorAll('.register-btn');
+        const judgeRegisterButtons = document.querySelectorAll('.judge-register-btn');
+        const backToHomeButtons = document.querySelectorAll('.back-to-home-btn');
+        const staffLoginBtn = document.getElementById('staff-login-btn');
+        const adminBackToHomeBtn = document.getElementById('admin-back-to-home-btn');
 
-            const passwordModal = document.getElementById('password-modal');
-            const passwordForm = document.getElementById('password-form');
-            const passwordInput = document.getElementById('password-input');
+        const participantForm = document.getElementById('participant-form');
+        const judgeForm = document.getElementById('judge-form');
+        
+        const modal = document.getElementById('feedback-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalMessage = document.getElementById('modal-message');
+        const modalCloseBtn = document.getElementById('modal-close');
 
-            const downloadParticipantsBtn = document.getElementById('download-participants-btn');
-            const downloadJudgesBtn = document.getElementById('download-judges-btn');
-            const participantsTableContainer = document.getElementById('participants-table-container');
-            const judgesTableContainer = document.getElementById('judges-table-container');
+        const passwordModal = document.getElementById('password-modal');
+        const passwordForm = document.getElementById('password-form');
+        const passwordInput = document.getElementById('password-input');
 
-            // --- Countdown Timer Logic ---
-            const countdownDate = new Date("Sep 24, 2025 08:30:00").getTime();
-            const countdownTimer = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = countdownDate - now;
+        const downloadParticipantsBtn = document.getElementById('download-participants-btn');
+        const downloadJudgesBtn = document.getElementById('download-judges-btn');
+        const participantsTableContainer = document.getElementById('participants-table-container');
+        const judgesTableContainer = document.getElementById('judges-table-container');
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // --- Admin Page Logic ---
+        const ADMIN_PASSWORD = "admin2025"; // Tukar kata laluan di sini
 
-                document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+        staffLoginBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            passwordModal.classList.remove('hidden');
+        });
 
-                if (distance < 0) {
-                    clearInterval(countdownTimer);
-                    document.getElementById("countdown-timer").innerHTML = "<div class='text-2xl font-bold'>Acara Telah Bermula!</div>";
-                }
-            }, 1000);
-
-            // --- Scroll Animation Logic ---
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    }
-                });
-            }, { threshold: 0.1 });
-
-            document.querySelectorAll('.fade-in-element').forEach(el => {
-                observer.observe(el);
-            });
-
-
-            // --- Admin Page Logic ---
-            const ADMIN_PASSWORD = "admin2025"; // Tukar kata laluan di sini
-
-            staffLoginBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                passwordModal.classList.remove('hidden');
-            });
-
-            passwordForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                if (passwordInput.value === ADMIN_PASSWORD) {
-                    passwordModal.classList.add('hidden');
-                    mainPage.classList.add('hidden');
-                    adminPage.classList.remove('hidden');
-                    await loadAdminData();
-                } else {
-                    showModal("Ralat", "Kata laluan salah. Sila cuba lagi.");
-                    passwordInput.value = '';
-                }
-            });
-            
-            if (adminBackToHomeBtn) {
-                adminBackToHomeBtn.addEventListener('click', () => {
-                     showMainPage();
-                });
+        passwordForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (passwordInput.value === ADMIN_PASSWORD) {
+                passwordModal.classList.add('hidden');
+                mainPage.classList.add('hidden');
+                adminPage.classList.remove('hidden');
+                await loadAdminData();
+            } else {
+                showModal("Ralat", "Kata laluan salah. Sila cuba lagi.");
+                passwordInput.value = '';
             }
+        });
+        
+        adminBackToHomeBtn.addEventListener('click', () => {
+             showMainPage();
+        });
 
-            async function loadAdminData() {
-                await displayTable('participant_registrations', participantsTableContainer, ['namaPasukan', 'namaInstitusi', 'namaKetua', 'emel', 'telefon']);
-                await displayTable('judge_registrations', judgesTableContainer, ['namaPenuh', 'jawatanInstitusi', 'emel', 'bidangKepakaran']);
-            }
+        async function loadAdminData() {
+            await displayTable('participant_registrations', participantsTableContainer, ['namaPasukan', 'namaInstitusi', 'namaKetua', 'emel', 'telefon']);
+            await displayTable('judge_registrations', judgesTableContainer, ['namaPenuh', 'jawatanInstitusi', 'emel', 'bidangKepakaran']);
+        }
 
-            async function displayTable(collectionName, container, headers) {
-                const loadingEl = container.querySelector('p');
-                loadingEl.textContent = `Memuatkan data dari ${collectionName}...`;
-                try {
-                    const data = await fetchData(collectionName);
-                    if (data.length === 0) {
-                        loadingEl.textContent = `Tiada data ditemui dalam ${collectionName}.`;
-                        return;
-                    }
-                    
-                    const table = document.createElement('table');
-                    table.className = 'min-w-full divide-y divide-gray-200';
-                    
-                    const thead = document.createElement('thead');
-                    thead.className = 'bg-gray-50';
-                    let headerRow = '<tr>';
+        async function displayTable(collectionName, container, headers) {
+            const loadingEl = container.querySelector('p');
+            loadingEl.textContent = `Memuatkan data dari ${collectionName}...`;
+            try {
+                const data = await fetchData(collectionName);
+                if (data.length === 0) {
+                    loadingEl.textContent = `Tiada data ditemui dalam ${collectionName}.`;
+                    return;
+                }
+                
+                const table = document.createElement('table');
+                table.className = 'min-w-full divide-y divide-gray-200';
+                
+                const thead = document.createElement('thead');
+                thead.className = 'bg-gray-50';
+                let headerRow = '<tr>';
+                headers.forEach(header => {
+                    headerRow += `<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">${header.replace(/([A-Z])/g, ' $1').trim()}</th>`;
+                });
+                headerRow += '</tr>';
+                thead.innerHTML = headerRow;
+                table.appendChild(thead);
+
+                const tbody = document.createElement('tbody');
+                tbody.className = 'bg-white divide-y divide-gray-200';
+                data.forEach(item => {
+                    let row = '<tr>';
                     headers.forEach(header => {
-                        headerRow += `<th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">${header.replace(/([A-Z])/g, ' $1').trim()}</th>`;
+                        row += `<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">${item[header] || ''}</td>`;
                     });
-                    headerRow += '</tr>';
-                    thead.innerHTML = headerRow;
-                    table.appendChild(thead);
-
-                    const tbody = document.createElement('tbody');
-                    tbody.className = 'bg-white divide-y divide-gray-200';
-                    data.forEach(item => {
-                        let row = '<tr>';
-                        headers.forEach(header => {
-                            row += `<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">${item[header] || ''}</td>`;
-                        });
-                        row += '</tr>';
-                        tbody.innerHTML += row;
-                    });
-                    table.appendChild(tbody);
-
-                    container.innerHTML = '';
-                    container.appendChild(table);
-
-                } catch (error) {
-                    loadingEl.textContent = `Ralat semasa memuatkan data.`;
-                    console.error(`Error displaying ${collectionName}:`, error);
-                }
-            }
-
-            async function fetchData(collectionName) {
-                if (!db) {
-                    showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data.");
-                    return [];
-                }
-                const querySnapshot = await getDocs(collection(db, `artifacts/${appId}/public/data/${collectionName}`));
-                const data = [];
-                querySnapshot.forEach((doc) => {
-                    data.push(doc.data());
+                    row += '</tr>';
+                    tbody.innerHTML += row;
                 });
-                return data;
+                table.appendChild(tbody);
+
+                container.innerHTML = '';
+                container.appendChild(table);
+
+            } catch (error) {
+                loadingEl.textContent = `Ralat semasa memuatkan data.`;
+                console.error(`Error displaying ${collectionName}:`, error);
             }
+        }
 
-            function convertToCSV(data) {
-                if (data.length === 0) return '';
-                const headers = Object.keys(data[0]);
-                const csvRows = [headers.join(',')];
-
-                for (const row of data) {
-                    const values = headers.map(header => {
-                        const escaped = ('' + (row[header] || '')).replace(/"/g, '""');
-                        return `"${escaped}"`;
-                    });
-                    csvRows.push(values.join(','));
-                }
-                return csvRows.join('\n');
+        async function fetchData(collectionName) {
+            if (!db) {
+                showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data.");
+                return [];
             }
-
-            function downloadCSV(csv, filename) {
-                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-                const link = document.createElement('a');
-                if (link.download !== undefined) {
-                    const url = URL.createObjectURL(blob);
-                    link.setAttribute('href', url);
-                    link.setAttribute('download', filename);
-                    link.style.visibility = 'hidden';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }
-            }
-
-            downloadParticipantsBtn.addEventListener('click', async () => {
-                downloadParticipantsBtn.textContent = 'Memuat turun...';
-                downloadParticipantsBtn.disabled = true;
-                try {
-                    const participants = await fetchData('participant_registrations');
-                    if (participants.length > 0) {
-                        const csv = convertToCSV(participants);
-                        downloadCSV(csv, 'pendaftaran_peserta.csv');
-                    } else {
-                        showModal("Tiada Data", "Tiada data pendaftaran peserta untuk dimuat turun.");
-                    }
-                } catch (error) {
-                    showModal("Ralat", "Gagal memuat turun data.");
-                    console.error("Error downloading data:", error);
-                } finally {
-                    downloadParticipantsBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg> Muat Turun Data Peserta';
-                    downloadParticipantsBtn.disabled = false;
-                }
+            const querySnapshot = await getDocs(collection(db, `artifacts/${appId}/public/data/${collectionName}`));
+            const data = [];
+            querySnapshot.forEach((doc) => {
+                data.push(doc.data());
             });
+            return data;
+        }
 
-            downloadJudgesBtn.addEventListener('click', async () => {
-                downloadJudgesBtn.textContent = 'Memuat turun...';
-                downloadJudgesBtn.disabled = true;
-                 try {
-                    const judges = await fetchData('judge_registrations');
-                     if (judges.length > 0) {
-                        const csv = convertToCSV(judges);
-                        downloadCSV(csv, 'pendaftaran_juri.csv');
-                    } else {
-                        showModal("Tiada Data", "Tiada data pendaftaran juri untuk dimuat turun.");
-                    }
-                } catch (error) {
-                    showModal("Ralat", "Gagal memuat turun data.");
-                    console.error("Error downloading data:", error);
-                } finally {
-                    downloadJudgesBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg> Muat Turun Data Juri';
-                    downloadJudgesBtn.disabled = false;
-                }
-            });
+        function convertToCSV(data) {
+            if (data.length === 0) return '';
+            const headers = Object.keys(data[0]);
+            const csvRows = [headers.join(',')];
 
-            // --- Modal Logic ---
-            function showModal(title, message) {
-                modalTitle.textContent = title;
-                modalMessage.textContent = message;
-                modal.classList.remove('hidden');
+            for (const row of data) {
+                const values = headers.map(header => {
+                    const escaped = ('' + (row[header] || '')).replace(/"/g, '""');
+                    return `"${escaped}"`;
+                });
+                csvRows.push(values.join(','));
             }
-            function hideModal() {
-                modal.classList.add('hidden');
+            return csvRows.join('\n');
+        }
+
+        function downloadCSV(csv, filename) {
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute('href', url);
+                link.setAttribute('download', filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
             }
-            modalCloseBtn.addEventListener('click', hideModal);
+        }
 
-            // --- Page Switching Logic ---
-            const showRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); registrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
-            const showJudgeRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); registrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); judgeRegistrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
-            const showMainPage = () => { registrationPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); mainPage.classList.remove('hidden'); window.scrollTo(0, 0); };
-
-            registerButtons.forEach(button => button.addEventListener('click', showRegistrationPage));
-            judgeRegisterButtons.forEach(button => button.addEventListener('click', showJudgeRegistrationPage));
-            backToHomeButtons.forEach(button => button.addEventListener('click', showMainPage));
-
-            // --- Form Submission Logic ---
-            participantForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                if (!db) {
-                    showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data. Sila pastikan konfigurasi Firebase adalah betul.");
-                    return;
+        downloadParticipantsBtn.addEventListener('click', async () => {
+            downloadParticipantsBtn.textContent = 'Memuat turun...';
+            downloadParticipantsBtn.disabled = true;
+            try {
+                const participants = await fetchData('participant_registrations');
+                if (participants.length > 0) {
+                    const csv = convertToCSV(participants);
+                    downloadCSV(csv, 'pendaftaran_peserta.csv');
+                } else {
+                    showModal("Tiada Data", "Tiada data pendaftaran peserta untuk dimuat turun.");
                 }
-                const submitButton = e.target.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                submitButton.textContent = 'Menghantar...';
+            } catch (error) {
+                showModal("Ralat", "Gagal memuat turun data.");
+                console.error("Error downloading data:", error);
+            } finally {
+                downloadParticipantsBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg> Muat Turun Data Peserta';
+                downloadParticipantsBtn.disabled = false;
+            }
+        });
 
-                try {
-                    const formData = new FormData(e.target);
-                    const data = {
-                        kategoriPenyertaan: formData.get('institution'),
-                        namaPasukan: formData.get('team_name'),
-                        namaInstitusi: formData.get('school'),
-                        tajukProjek: formData.get('project_title'),
-                        kategoriTeknologi: formData.get('tech_category'),
-                        namaKetua: formData.get('contact_name'),
-                        emel: formData.get('email'),
-                        telefon: formData.get('phone'),
-                        tarikhDaftar: serverTimestamp()
-                    };
-                    
-                    const docRef = await addDoc(collection(db, `artifacts/${appId}/public/data/participant_registrations`), data);
-                    console.log("Participant registered with ID: ", docRef.id);
-                    showModal("Pendaftaran Berjaya!", "Terima kasih kerana mendaftar. Maklumat anda telah berjaya dihantar.");
-                    e.target.reset();
-                    showMainPage();
-
-                } catch (error) {
-                    console.error("Error adding document: ", error);
-                    showModal("Pendaftaran Gagal", "Maaf, terdapat masalah semasa menghantar pendaftaran anda. Sila cuba lagi.");
-                } finally {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Hantar Pendaftaran';
+        downloadJudgesBtn.addEventListener('click', async () => {
+            downloadJudgesBtn.textContent = 'Memuat turun...';
+            downloadJudgesBtn.disabled = true;
+             try {
+                const judges = await fetchData('judge_registrations');
+                 if (judges.length > 0) {
+                    const csv = convertToCSV(judges);
+                    downloadCSV(csv, 'pendaftaran_juri.csv');
+                } else {
+                    showModal("Tiada Data", "Tiada data pendaftaran juri untuk dimuat turun.");
                 }
-            });
+            } catch (error) {
+                showModal("Ralat", "Gagal memuat turun data.");
+                console.error("Error downloading data:", error);
+            } finally {
+                downloadJudgesBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" /></svg> Muat Turun Data Juri';
+                downloadJudgesBtn.disabled = false;
+            }
+        });
 
-            judgeForm.addEventListener('submit', async (e) => {
-                e.preventDefault();
-                if (!db) {
-                    showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data. Sila pastikan konfigurasi Firebase adalah betul.");
-                    return;
-                }
-                const submitButton = e.target.querySelector('button[type="submit"]');
-                submitButton.disabled = true;
-                submitButton.textContent = 'Menghantar...';
+        // --- Modal Logic ---
+        function showModal(title, message) {
+            modalTitle.textContent = title;
+            modalMessage.textContent = message;
+            modal.classList.remove('hidden');
+        }
+        function hideModal() {
+            modal.classList.add('hidden');
+        }
+        modalCloseBtn.addEventListener('click', hideModal);
 
-                try {
-                    const formData = new FormData(e.target);
-                    const data = {
-                        namaPenuh: formData.get('judge_name'),
-                        jawatanInstitusi: formData.get('judge_institution'),
-                        emel: formData.get('judge_email'),
-                        telefon: formData.get('judge_phone'),
-                        bidangKepakaran: formData.get('judge_expertise'),
-                        tarikhDaftar: serverTimestamp()
-                    };
+        // --- Page Switching Logic ---
+        const showRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); registrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
+        const showJudgeRegistrationPage = (event) => { event.preventDefault(); mainPage.classList.add('hidden'); registrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); judgeRegistrationPage.classList.remove('hidden'); window.scrollTo(0, 0); };
+        const showMainPage = () => { registrationPage.classList.add('hidden'); judgeRegistrationPage.classList.add('hidden'); adminPage.classList.add('hidden'); mainPage.classList.remove('hidden'); window.scrollTo(0, 0); };
 
-                    const docRef = await addDoc(collection(db, `artifacts/${appId}/public/data/judge_registrations`), data);
-                    console.log("Judge registered with ID: ", docRef.id);
-                    showModal("Permohonan Berjaya!", "Terima kasih atas permohonan anda sebagai juri. Pihak kami akan menghubungi anda untuk maklumat lanjut.");
-                    e.target.reset();
-                    showMainPage();
+        registerButtons.forEach(button => button.addEventListener('click', showRegistrationPage));
+        judgeRegisterButtons.forEach(button => button.addEventListener('click', showJudgeRegistrationPage));
+        backToHomeButtons.forEach(button => button.addEventListener('click', showMainPage));
 
-                } catch (error) {
-                    console.error("Error adding document: ", error);
-                    showModal("Permohonan Gagal", "Maaf, terdapat masalah semasa menghantar permohonan anda. Sila cuba lagi.");
-                } finally {
-                    submitButton.disabled = false;
-                    submitButton.textContent = 'Hantar Permohonan Juri';
-                }
-            });
+        // --- Form Submission Logic ---
+        participantForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!db) {
+                showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data. Sila pastikan konfigurasi Firebase adalah betul.");
+                return;
+            }
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Menghantar...';
+
+            try {
+                const formData = new FormData(e.target);
+                const data = {
+                    kategoriPenyertaan: formData.get('institution'),
+                    namaPasukan: formData.get('team_name'),
+                    namaInstitusi: formData.get('school'),
+                    tajukProjek: formData.get('project_title'),
+                    kategoriTeknologi: formData.get('tech_category'),
+                    namaKetua: formData.get('contact_name'),
+                    emel: formData.get('email'),
+                    telefon: formData.get('phone'),
+                    tarikhDaftar: serverTimestamp()
+                };
+                
+                const docRef = await addDoc(collection(db, `artifacts/${appId}/public/data/participant_registrations`), data);
+                console.log("Participant registered with ID: ", docRef.id);
+                showModal("Pendaftaran Berjaya!", "Terima kasih kerana mendaftar. Maklumat anda telah berjaya dihantar.");
+                e.target.reset();
+                showMainPage();
+
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                showModal("Pendaftaran Gagal", "Maaf, terdapat masalah semasa menghantar pendaftaran anda. Sila cuba lagi.");
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Hantar Pendaftaran';
+            }
+        });
+
+        judgeForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!db) {
+                showModal("Ralat Pangkalan Data", "Gagal menyambung ke pangkalan data. Sila pastikan konfigurasi Firebase adalah betul.");
+                return;
+            }
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Menghantar...';
+
+            try {
+                const formData = new FormData(e.target);
+                const data = {
+                    namaPenuh: formData.get('judge_name'),
+                    jawatanInstitusi: formData.get('judge_institution'),
+                    emel: formData.get('judge_email'),
+                    telefon: formData.get('judge_phone'),
+                    bidangKepakaran: formData.get('judge_expertise'),
+                    tarikhDaftar: serverTimestamp()
+                };
+
+                const docRef = await addDoc(collection(db, `artifacts/${appId}/public/data/judge_registrations`), data);
+                console.log("Judge registered with ID: ", docRef.id);
+                showModal("Permohonan Berjaya!", "Terima kasih atas permohonan anda sebagai juri. Pihak kami akan menghubungi anda untuk maklumat lanjut.");
+                e.target.reset();
+                showMainPage();
+
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                showModal("Permohonan Gagal", "Maaf, terdapat masalah semasa menghantar permohonan anda. Sila cuba lagi.");
+            } finally {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Hantar Permohonan Juri';
+            }
         });
     </script>
 
