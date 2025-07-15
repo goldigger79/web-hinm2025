@@ -108,7 +108,7 @@
 
         <!-- Event Info Section -->
         <section id="info" class="py-20">
-            <div class="container mx-auto px-6"><div class="bg-white rounded-xl shadow-lg p-8 md:p-12 fade-in-element"><div class="grid md:grid-cols-3 gap-8 text-center"><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-red); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tarikh</h3><p class="text-slate-600">24 September 2025 (Rabu)</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-blue); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tempat</h3><p class="text-slate-600">Dewan Lestari, UniKL MICET, Melaka</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-yellow); color: #333;"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Masa</h3><p class="text-slate-600">8.30 pagi – 5.00 petang</p></div></div></div></div>
+            <div class="container mx-auto px-6"><div class="bg-white rounded-xl shadow-lg p-8 md:p-12 fade-in-element"><div class="grid md:grid-cols-3 gap-8 text-center"><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-red); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tarikh</h3><p class="text-slate-600">25 September 2025 (Khamis)</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-blue); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tempat</h3><p class="text-slate-600">Dewan Lestari, UniKL MICET, Melaka</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-yellow); color: #333;"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Masa</h3><p class="text-slate-600">8.30 pagi – 5.00 petang</p></div></div></div></div>
         </section>
 
         <!-- Theme Section -->
@@ -286,7 +286,7 @@
             const adminBackToHomeBtn = document.getElementById('admin-back-to-home-btn');
 
             // --- Countdown Timer Logic ---
-            const countdownDate = new Date("Sep 24, 2025 08:30:00").getTime();
+            const countdownDate = new Date("Sep 25, 2025 08:30:00").getTime();
             const countdownTimer = setInterval(function() {
                 const now = new Date().getTime();
                 const distance = countdownDate - now;
@@ -321,12 +321,20 @@
             });
 
 
-            // --- Page Switching Logic ---
+            // --- Page Switching Logic (No Firebase needed) ---
             const showRegistrationPage = (event) => { event.preventDefault(); window.open("https://forms.gle/apg32m6F7sRkXgDG6", "_blank"); };
             const showJudgeRegistrationPage = (event) => { event.preventDefault(); window.open("https://forms.gle/sEuTsYfTmPjwNYZF9", "_blank"); };
 
             registerButtons.forEach(button => button.addEventListener('click', showRegistrationPage));
             judgeRegisterButtons.forEach(button => button.addEventListener('click', showJudgeRegistrationPage));
+            
+            if (staffLoginBtn) {
+                staffLoginBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Since admin page is removed, we can just show an alert or do nothing.
+                    alert("Fungsi log masuk staf tidak tersedia dalam versi ini.");
+                });
+            }
         });
     </script>
 </body>
