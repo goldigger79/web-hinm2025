@@ -228,19 +228,15 @@
         
         <!-- CTA / Registration Section -->
         <section id="daftar" class="text-white" style="background-color: var(--melaka-blue);">
-            <div class="container mx-auto px-6 py-20 text-center"><h2 class="text-4xl font-extrabold mb-4">Sedia Untuk Berinovasi?</h2><p class="text-lg max-w-2xl mx-auto mb-8 text-blue-100">Jangan lepaskan peluang untuk menjadi sebahagian daripada gerakan inovasi di Negeri Melaka. Daftar penyertaan anda atau pasukan anda hari ini!</p><a href="#" class="register-btn text-slate-900 font-bold px-10 py-4 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 shadow-xl text-lg" style="background-color: var(--melaka-yellow);">Daftar Sebagai Peserta</a></div>
+            <div class="container mx-auto px-6 py-20 text-center"><h2 class="text-4xl font-extrabold mb-4">Sedia Untuk Berinovasi?</h2><p class="text-lg max-w-2xl mx-auto mb-8 text-blue-100">Jangan lepaskan peluang untuk menjadi sebahagian daripada gerakan inovasi di Negeri Melaka. Daftar penyertaan anda atau pasukan anda hari ini!</p><a href="https://forms.gle/apg32m6F7sRkXgDG6" target="_blank" class="text-slate-900 font-bold px-10 py-4 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 shadow-xl text-lg" style="background-color: var(--melaka-yellow);">Daftar Sebagai Peserta</a></div>
         </section>
 
         <!-- Organizers Section -->
-        <section id="penganjur" class="py-16">
-            <div class="container mx-auto px-6"><h2 class="text-center text-2xl font-bold text-slate-700 mb-10">Dengan Kerjasama</h2>
-                <div class="flex justify-center items-center gap-8 md:gap-16 flex-wrap">
-                    <!-- Logo Jata Melaka -->
-                    <img src="https://icon2.cleanpng.com/lnd/20250116/ju/3d718f9f40b730fc1264a2a084c3fe.webp" alt="Logo Jata Negeri Melaka" class="h-24 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110">
-                    <!-- Logo UTeM -->
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/UTeM.jpg" alt="Logo UTeM" class="h-20 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110">
-                    <!-- Logo UniKL MICET -->
-                    <img src="https://info.unikl.edu.my/wp-content/uploads/2024/07/unikl-logo-png-new-1.png" alt="Logo UniKL MICET" class="h-20 transition-all duration-300 filter grayscale hover:grayscale-0 hover:scale-110">
+        <section id="penganjur" class="py-16 bg-slate-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-center text-2xl font-bold text-slate-700 mb-10">Dengan Kerjasama</h2>
+                <div class="flex justify-center">
+                    <img src='https://i.postimg.cc/W4KWK1rK/logo-kerjasama.png' alt='Logo Kerjasama Penganjur' class='max-w-full h-auto'/>
                 </div>
             </div>
         </section>
@@ -249,10 +245,6 @@
         <footer class="text-slate-300 py-10" style="background-color: #00227a;">
             <div class="container mx-auto px-6 text-center">
                 <p>&copy; 2025 Hari Inovasi Negeri Melaka. Hak Cipta Terpelihara.</p>
-                <p class="text-sm mt-2">Dianjurkan dengan kerjasama Kerajaan Negeri Melaka, UTeM dan UniKL MICET.</p>
-                <div class="mt-4">
-                    <a href="#" id="staff-login-btn" class="text-xs text-slate-400 hover:text-white transition">Log Masuk Staf</a>
-                </div>
             </div>
         </footer>
     </div>
@@ -263,28 +255,9 @@
         <a href="https://t.me/+OqV-bXgoXqViYmRl" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #26A5E4;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.857 1.23-.695.04-1.22-.46-1.8-1.08l-2.87-2.1-.002.001-1.408 1.358a.71.71 0 0 1-.55.244l.2-1.43 3.64-3.3c.625-.573.34-1.018-.28-1.59l-4.55 2.975c-.81.535-1.57.18-1.81-.51l-1.05-3.11C4.1 8.26 4.63 7.5 5.46 7.16c3.33-1.39 6.88-2.85 7.44-3.03.24-.07.4-.04.48.03z" /></svg></a>
     </div>
 
-    <!-- Registration & Admin Pages (HTML structure remains the same) -->
-    <div id="registration-page" class="hidden">...</div>
-    <div id="judge-registration-page" class="hidden">...</div>
-    <div id="admin-page" class="hidden">...</div>
-    <div id="feedback-modal" class="modal-backdrop hidden">...</div>
-    <div id="password-modal" class="modal-backdrop hidden">...</div>
-
     <!-- Main Application Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- UI Elements ---
-            const mainPage = document.getElementById('main-page');
-            const registrationPage = document.getElementById('registration-page');
-            const judgeRegistrationPage = document.getElementById('judge-registration-page');
-            const adminPage = document.getElementById('admin-page');
-            
-            const registerButtons = document.querySelectorAll('.register-btn');
-            const judgeRegisterButtons = document.querySelectorAll('.judge-register-btn');
-            const backToHomeButtons = document.querySelectorAll('.back-to-home-btn');
-            const staffLoginBtn = document.getElementById('staff-login-btn');
-            const adminBackToHomeBtn = document.getElementById('admin-back-to-home-btn');
-
             // --- Countdown Timer Logic ---
             const countdownDate = new Date("Sep 25, 2025 08:30:00").getTime();
             const countdownTimer = setInterval(function() {
@@ -319,22 +292,6 @@
             document.querySelectorAll('.fade-in-element').forEach(el => {
                 observer.observe(el);
             });
-
-
-            // --- Page Switching Logic (No Firebase needed) ---
-            const showRegistrationPage = (event) => { event.preventDefault(); window.open("https://forms.gle/apg32m6F7sRkXgDG6", "_blank"); };
-            const showJudgeRegistrationPage = (event) => { event.preventDefault(); window.open("https://forms.gle/sEuTsYfTmPjwNYZF9", "_blank"); };
-
-            registerButtons.forEach(button => button.addEventListener('click', showRegistrationPage));
-            judgeRegisterButtons.forEach(button => button.addEventListener('click', showJudgeRegistrationPage));
-            
-            if (staffLoginBtn) {
-                staffLoginBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    // Since admin page is removed, we can just show an alert or do nothing.
-                    alert("Fungsi log masuk staf tidak tersedia dalam versi ini.");
-                });
-            }
         });
     </script>
 </body>
