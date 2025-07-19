@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hari Inovasi Negeri Melaka 2025</title>
     
-    <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -33,14 +27,17 @@
         body { 
             font-family: 'Inter', sans-serif; 
             background-color: #f8fafc;
+            /* A subtle background pattern */
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4d4d8' fill-opacity='0.3'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
             background-attachment: fixed;
         }
         .hero-bg {
-            background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(214, 40, 40, 0.8)), url('banner.png');
+            /* Example with a placeholder: background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(214, 40, 40, 0.8)), url('https://placehold.co/1920x1080/cccccc/cccccc'); */
+            background-image: linear-gradient(to right, rgba(0, 51, 160, 0.9), rgba(214, 40, 40, 0.8));
             background-size: cover;
             background-position: center;
         }
+        .section-title { text-align: center; margin-bottom: 3rem; }
         .section-title h2 { font-size: 2.5rem; font-weight: 800; color: var(--melaka-blue); margin-bottom: 0.5rem; }
         .section-title p { font-size: 1.125rem; color: #475569; max-width: 600px; margin: 0 auto; }
         .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
@@ -85,7 +82,7 @@
             <div class="container mx-auto px-6 text-center">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Hari Inovasi Negeri Melaka 2025</h1>
                 <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-slate-200">Menghimpunkan dan menyemarakkan ekosistem penyelidikan dan inovasi, menyokong inisiatif Bank Inovasi Melaka (BIM).</p>
-                <div class="flex justify-center space-x-4">
+                <div class="flex justify-center flex-wrap gap-4">
                     <a href="https://forms.gle/apg32m6F7sRkXgDG6" target="_blank" class="text-slate-900 font-bold px-8 py-3 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 shadow-lg" style="background-color: var(--melaka-yellow);">Daftar Sebagai Peserta</a>
                     <a href="#info" class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition-all shadow-lg">Ketahui Lanjut</a>
                 </div>
@@ -96,28 +93,80 @@
         <section id="countdown" class="py-12 bg-white">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-2xl font-bold mb-4" style="color: var(--melaka-blue);">Kira Detik ke Hari Inovasi!</h2>
-                <div id="countdown-timer" class="flex justify-center gap-4 md:gap-8 text-slate-800">
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="days" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Hari</div></div>
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="hours" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Jam</div></div>
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="minutes" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Minit</div></div>
-                    <div class="text-center p-4 rounded-lg bg-slate-100 w-24"><div id="seconds" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Saat</div></div>
+                <div id="countdown-timer" class="flex justify-center gap-2 md:gap-8 text-slate-800">
+                    <div class="text-center p-4 rounded-lg bg-slate-100 w-20 md:w-24"><div id="days" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Hari</div></div>
+                    <div class="text-center p-4 rounded-lg bg-slate-100 w-20 md:w-24"><div id="hours" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Jam</div></div>
+                    <div class="text-center p-4 rounded-lg bg-slate-100 w-20 md:w-24"><div id="minutes" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Minit</div></div>
+                    <div class="text-center p-4 rounded-lg bg-slate-100 w-20 md:w-24"><div id="seconds" class="text-4xl md:text-5xl font-extrabold">00</div><div class="text-sm uppercase">Saat</div></div>
                 </div>
             </div>
         </section>
 
         <!-- Event Info Section -->
         <section id="info" class="py-20">
-            <div class="container mx-auto px-6"><div class="bg-white rounded-xl shadow-lg p-8 md:p-12 fade-in-element"><div class="grid md:grid-cols-3 gap-8 text-center"><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-red); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tarikh</h3><p class="text-slate-600">25 September 2025 (Khamis)</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-blue); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Tempat</h3><p class="text-slate-600">Dewan Lestari, UniKL MICET, Melaka</p></div><div class="flex flex-col items-center"><div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-yellow); color: #333;"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800">Masa</h3><p class="text-slate-600">8.30 pagi – 5.00 petang</p></div></div></div></div>
+            <div class="container mx-auto px-6">
+                <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 fade-in-element">
+                    <div class="grid md:grid-cols-3 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-red); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">Tarikh</h3>
+                            <p class="text-slate-600">25 September 2025 (Khamis)</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-blue); color: var(--melaka-white);"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">Tempat</h3>
+                            <p class="text-slate-600">Dewan Lestari, UniKL MICET, Melaka</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4" style="background-color: var(--melaka-yellow); color: #333;"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                            <h3 class="text-xl font-bold text-slate-800">Masa</h3>
+                            <p class="text-slate-600">8.30 pagi – 5.00 petang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Theme Section -->
         <section id="tema" class="pb-20">
-            <div class="container mx-auto px-6"><div class="text-center max-w-4xl mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md fade-in-element"><h2 class="text-3xl font-extrabold mb-4" style="color: var(--melaka-blue);">Tema: "Menjana Solusi Inovatif ke Arah Komuniti Sejahtera”</h2><p class="text-slate-600 leading-relaxed">Selaras dengan objektif strategik halatuju Negeri Melaka, pemerkasaan teknologi adalah elemen penting dalam memastikan kelestarian inovasi yang memanfaatkan industri dan komuniti. Inovasi memerlukan penyelesaian terkini yang menggabungkan kaedah konvensional dan moden. Kombinasi ini hanya dapat dicapai dengan kerjasama semua pihak dengan idea dan pengalaman yang berbeza untuk menyelesaikan permasalahan komuniti yang sebenar, agar hasil inovasi yang dicipta dapat dinikmati oleh semua.</p></div></div>
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-lg shadow-md fade-in-element">
+                    <h2 class="text-3xl font-extrabold mb-4" style="color: var(--melaka-blue);">Tema: "Menjana Solusi Inovatif ke Arah Komuniti Sejahtera”</h2>
+                    <p class="text-slate-600 leading-relaxed">Selaras dengan objektif strategik halatuju Negeri Melaka, pemerkasaan teknologi adalah elemen penting dalam memastikan kelestarian inovasi yang memanfaatkan industri dan komuniti. Inovasi memerlukan penyelesaian terkini yang menggabungkan kaedah konvensional dan moden. Kombinasi ini hanya dapat dicapai dengan kerjasama semua pihak dengan idea dan pengalaman yang berbeza untuk menyelesaikan permasalahan komuniti yang sebenar, agar hasil inovasi yang dicipta dapat dinikmati oleh semua.</p>
+                </div>
+            </div>
         </section>
 
         <!-- Objectives Section -->
         <section id="objektif" class="py-20">
-            <div class="container mx-auto px-6"><div class="section-title"><h2>Objektif Program</h2><p>Matlamat kami adalah untuk memupuk budaya inovasi yang mampan dan berdaya saing di Negeri Melaka.</p></div><div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8"><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element"><div class="bg-blue-100 text-blue-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.955 11a2 2 0 012-2h2a2 2 0 012 2m-4 6h4m-6 4h6m2-12H9.045M15.955 11a2 2 0 002-2h2a2 2 0 002 2m-4 6h4m-6 4h6m6-12h-1.955" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Platform Global</h3><p>Menyediakan platform untuk membawa hasil penyelidikan ke pertandingan inovasi kebangsaan dan antarabangsa.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 100ms;"><div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Budaya Inovasi</h3><p>Memupuk masyarakat Melaka yang sentiasa berinovasi untuk menjana pendapatan daripada hasil penyelidikan.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 200ms;"><div class="bg-yellow-100 text-yellow-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Jalinan Kerjasama</h3><p>Memperkukuhkan kerjasama erat antara agensi kerajaan, industri, IPT, sekolah dan orang awam.</p></div><div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 300ms;"><div class="bg-slate-100 text-slate-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div><h3 class="text-xl font-bold text-slate-800 mb-3">Pameran Kepakaran</h3><p>Menghimpunkan kepakaran teknologi dan memperlihatkan kepelbagaian hasil cipta serta reka bentuk terkini.</p></div></div></div>
+            <div class="container mx-auto px-6">
+                <div class="section-title">
+                    <h2>Objektif Program</h2>
+                    <p>Matlamat kami adalah untuk memupuk budaya inovasi yang mampan dan berdaya saing di Negeri Melaka.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element">
+                        <div class="bg-blue-100 text-blue-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.955 11a2 2 0 012-2h2a2 2 0 012 2m-4 6h4m-6 4h6m2-12H9.045M15.955 11a2 2 0 002-2h2a2 2 0 002 2m-4 6h4m-6 4h6m6-12h-1.955" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Platform Global</h3>
+                        <p>Menyediakan platform untuk membawa hasil penyelidikan ke pertandingan inovasi kebangsaan dan antarabangsa.</p>
+                    </div>
+                    <div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 100ms;">
+                        <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Budaya Inovasi</h3>
+                        <p>Memupuk masyarakat Melaka yang sentiasa berinovasi untuk menjana pendapatan daripada hasil penyelidikan.</p>
+                    </div>
+                    <div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 200ms;">
+                        <div class="bg-yellow-100 text-yellow-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Jalinan Kerjasama</h3>
+                        <p>Memperkukuhkan kerjasama erat antara agensi kerajaan, industri, IPT, sekolah dan orang awam.</p>
+                    </div>
+                    <div class="card bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg fade-in-element" style="transition-delay: 300ms;">
+                        <div class="bg-slate-100 text-slate-600 w-16 h-16 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg></div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Pameran Kepakaran</h3>
+                        <p>Menghimpunkan kepakaran teknologi dan memperlihatkan kepelbagaian hasil cipta serta reka bentuk terkini.</p>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <!-- Categories Section -->
@@ -185,7 +234,7 @@
                         <h4 class="font-semibold text-slate-800 transition-opacity duration-300 group-hover:opacity-0">Social Science, Business & Teaching Innovation, Education, Community Development & Social Innovation</h4>
                     </div>
                     <!-- Category 9 -->
-                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden">
+                    <div class="group relative bg-slate-50 p-6 rounded-lg text-center border border-slate-200 hover:shadow-lg hover:border-blue-500 transition-all duration-300 h-40 flex items-center justify-center overflow-hidden fade-in-element">
                         <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-blue-100/80">
                             <svg class="w-12 h-12 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
                         </div>
@@ -204,19 +253,19 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <div class="bg-white p-8 rounded-lg shadow-lg fade-in-element">
-                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4">
+                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Foto Prof. Dr. Ahmad">
                         <p class="text-slate-600 italic">"Satu platform yang hebat untuk mengetengahkan bakat-bakat inovasi dari seluruh Melaka. Sangat menggalakkan!"</p>
                         <h4 class="font-bold mt-4 text-slate-800">Prof. Dr. Ahmad</h4>
                         <p class="text-sm text-slate-500">Pemenang Anugerah Inovasi 2024</p>
                     </div>
                      <div class="bg-white p-8 rounded-lg shadow-lg fade-in-element" style="transition-delay: 150ms;">
-                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4">
+                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Foto Puan Siti Mariam">
                         <p class="text-slate-600 italic">"Peluang untuk berkolaborasi dengan pihak industri dan akademik di bawah satu bumbung amat bernilai."</p>
                         <h4 class="font-bold mt-4 text-slate-800">Puan Siti Mariam</h4>
                         <p class="text-sm text-slate-500">Pengarah Syarikat Teknologi</p>
                     </div>
                      <div class="bg-white p-8 rounded-lg shadow-lg fade-in-element" style="transition-delay: 300ms;">
-                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4">
+                        <img src="https://placehold.co/100x100/EFEFEF/AAAAAA?text=Foto" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Foto Adib Zikri">
                         <p class="text-slate-600 italic">"Sebagai pelajar, pengalaman menyertai pertandingan ini membuka minda dan memberi inspirasi untuk terus mencipta."</p>
                         <h4 class="font-bold mt-4 text-slate-800">Adib Zikri</h4>
                         <p class="text-sm text-slate-500">Peserta Kategori Sekolah Menengah</p>
@@ -227,14 +276,19 @@
         
         <!-- CTA / Registration Section -->
         <section id="daftar" class="text-white" style="background-color: var(--melaka-blue);">
-            <div class="container mx-auto px-6 py-20 text-center"><h2 class="text-4xl font-extrabold mb-4">Sedia Untuk Berinovasi?</h2><p class="text-lg max-w-2xl mx-auto mb-8 text-blue-100">Jangan lepaskan peluang untuk menjadi sebahagian daripada gerakan inovasi di Negeri Melaka. Daftar penyertaan anda atau pasukan anda hari ini!</p><a href="https://forms.gle/apg32m6F7sRkXgDG6" target="_blank" class="text-slate-900 font-bold px-10 py-4 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 shadow-xl text-lg" style="background-color: var(--melaka-yellow);">Daftar Sebagai Peserta</a></div>
+            <div class="container mx-auto px-6 py-20 text-center">
+                <h2 class="text-4xl font-extrabold mb-4">Sedia Untuk Berinovasi?</h2>
+                <p class="text-lg max-w-2xl mx-auto mb-8 text-blue-100">Jangan lepaskan peluang untuk menjadi sebahagian daripada gerakan inovasi di Negeri Melaka. Daftar penyertaan anda atau pasukan anda hari ini!</p>
+                <a href="https://forms.gle/apg32m6F7sRkXgDG6" target="_blank" class="text-slate-900 font-bold px-10 py-4 rounded-full hover:opacity-90 transition-transform transform hover:scale-105 shadow-xl text-lg" style="background-color: var(--melaka-yellow);">Daftar Sebagai Peserta</a>
+            </div>
         </section>
 
         <!-- Organizers Section -->
         <section id="penganjur" class="py-8 bg-slate-100">
             <div class="container mx-auto px-6">
                 <div class="flex justify-center">
-                    <img src='logo penganjur.png' border='0' alt='logo-hnim-25' class='max-w-full h-auto'/>
+                    <!-- NOTE: 'logo penganjur.png' is a local file. Replaced with a placeholder. -->
+                    <img src='https://placehold.co/1200x150/FFFFFF/AAAAAA?text=Logo+Penganjur' border='0' alt='logo-hnim-25' class='max-w-full h-auto'/>
                 </div>
             </div>
         </section>
@@ -249,8 +303,12 @@
 
     <!-- Floating Social Media Icons -->
     <div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
-        <a href="https://www.facebook.com/HARIINOVASIMELAKA2025" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #1877F2;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg></a>
-        <a href="https://t.me/+OqV-bXgoXqViYmRl" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #26A5E4;"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.857 1.23-.695.04-1.22-.46-1.8-1.08l-2.87-2.1-.002.001-1.408 1.358a.71.71 0 0 1-.55.244l.2-1.43 3.64-3.3c.625-.573.34-1.018-.28-1.59l-4.55 2.975c-.81.535-1.57.18-1.81-.51l-1.05-3.11C4.1 8.26 4.63 7.5 5.46 7.16c3.33-1.39 6.88-2.85 7.44-3.03.24-.07.4-.04.48.03z" /></svg></a>
+        <a href="https://www.facebook.com/HARIINOVASIMELAKA2025" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #1877F2;" aria-label="Facebook">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+        </a>
+        <a href="https://t.me/+OqV-bXgoXqViYmRl" target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background-color: #26A5E4;" aria-label="Telegram">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.17.91-.494 1.208-.857 1.23-.695.04-1.22-.46-1.8-1.08l-2.87-2.1-.002.001-1.408 1.358a.71.71 0 0 1-.55.244l.2-1.43 3.64-3.3c.625-.573.34-1.018-.28-1.59l-4.55 2.975c-.81.535-1.57.18-1.81-.51l-1.05-3.11C4.1 8.26 4.63 7.5 5.46 7.16c3.33-1.39 6.88-2.85 7.44-3.03.24-.07.4-.04.48.03z" /></svg>
+        </a>
     </div>
 
     <!-- Main Application Script -->
@@ -262,19 +320,19 @@
                 const now = new Date().getTime();
                 const distance = countdownDate - now;
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                if (distance > 0) {
+                    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-                document.getElementById("days").innerText = days.toString().padStart(2, '0');
-                document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-                document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-                document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
-
-                if (distance < 0) {
+                    document.getElementById("days").innerText = days.toString().padStart(2, '0');
+                    document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+                    document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+                    document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+                } else {
                     clearInterval(countdownTimer);
-                    document.getElementById("countdown-timer").innerHTML = "<div class='text-2xl font-bold'>Acara Telah Bermula!</div>";
+                    document.getElementById("countdown").innerHTML = "<div class='container mx-auto px-6 text-center'><div class='text-2xl font-bold' style='color: var(--melaka-blue);'>Acara Telah Bermula!</div></div>";
                 }
             }, 1000);
 
